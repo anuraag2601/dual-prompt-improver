@@ -14,6 +14,7 @@ Unlike traditional prompt optimization that only improves the system prompt, thi
 
 - **Dual Optimization**: Improves both system and critique prompts simultaneously
 - **Meta-Evaluation**: Evaluates the critique prompt's own performance
+- **Multi-Model Support**: Compatible with OpenAI GPT and Anthropic Claude models
 - **Intelligent Scheduling**: Configurable frequency for critique prompt evaluation
 - **Comprehensive Tracking**: Detailed history of all improvements
 - **Smart Early Stopping**: Prevents unnecessary iterations
@@ -24,12 +25,13 @@ Unlike traditional prompt optimization that only improves the system prompt, thi
 ## 📁 Project Structure
 
 ```
-├── dual_prompt_improver.py     # Main enhanced script with dual optimization
-├── syspromptimprover.py       # Original single-prompt optimizer  
+├── system_prompt_improver.py  # Main dual optimization script
 ├── config.py                  # Configuration file
 ├── user_input.txt             # Your task description
 ├── initial_system_prompt.txt  # Starting system prompt
 ├── critique_system_prompt.txt # Starting critique prompt
+├── requirements.txt           # Python dependencies
+├── install.sh                 # Automated setup script
 └── README.md                  # This file
 ```
 
@@ -67,7 +69,7 @@ Unlike traditional prompt optimization that only improves the system prompt, thi
 
 ### Quick Start
 ```bash
-python dual_prompt_improver.py
+python system_prompt_improver.py
 ```
 
 ### Configuration
@@ -158,16 +160,6 @@ META_EVALUATION_WEIGHTS = {
 4. **Monitor meta-scores** - Watch how your critique prompt improves over time
 5. **Experiment with frequencies** - Try different `IMPROVE_CRITIQUE_EVERY` values
 
-## 🆚 Comparison: Single vs Dual Optimization
-
-| Aspect | Single Optimization | Dual Optimization |
-|--------|-------------------|------------------|
-| **System Prompt** | Improves ✅ | Improves ✅ |
-| **Critique Quality** | Static ❌ | Improves ✅ |
-| **Evaluation Accuracy** | Fixed ❌ | Increases ✅ |
-| **Long-term Performance** | Plateaus ❌ | Continues improving ✅ |
-| **Robustness** | Limited ❌ | High ✅ |
-
 ## 📝 Example Results
 
 ```
@@ -187,14 +179,6 @@ Critique Improvements: 2
 - **API Error Handling**: Robust error recovery
 - **Validation**: Input validation and sanity checks
 - **Backup**: All intermediate results are saved
-
-## 🔄 Migration from Original
-
-To upgrade from the original `syspromptimprover.py`:
-
-1. Copy your existing input files (they're compatible)
-2. Run `dual_prompt_improver.py` instead
-3. Enjoy the enhanced dual optimization!
 
 ## 🤝 Contributing
 
