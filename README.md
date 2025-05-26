@@ -37,7 +37,7 @@ Unlike traditional prompt optimization that only improves the system prompt, thi
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/dual-prompt-improver.git
+   git clone https://github.com/anuraag2601/dual-prompt-improver.git
    cd dual-prompt-improver
    ```
 
